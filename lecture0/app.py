@@ -1,10 +1,11 @@
 from flask import Flask
+from flask import render_template
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return 'INDEX'
+    return render_template('index.html')
 
 @app.route('/welcome')
 def sign_in():
